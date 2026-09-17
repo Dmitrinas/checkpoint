@@ -1,0 +1,15 @@
+node_modules
+dist
+.output
+.vercel
+.tanstack
+.nitro
+.grok/preview.log
+.grok/og-pending
+screenshots
+*.log
+.DS_Store
+.env
+.env.*
+!.env.example
+artifacts/*.zip

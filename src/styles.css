@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+
+  --color-background: #f3f1ec;
+  --color-foreground: #1c1917;
+  --color-card: #fffcf7;
+  --color-card-foreground: #1c1917;
+  --color-muted: #ebe7df;
+  --color-muted-foreground: #6b6560;
+  --color-border: #ddd6cb;
+  --color-primary: #1d4e4a;
+  --color-primary-foreground: #f7f5f0;
+  --color-secondary: #efebe3;
+  --color-secondary-foreground: #1c1917;
+  --color-destructive: #b42318;
+  --color-destructive-foreground: #fff;
+  --color-success: #166534;
+  --color-success-foreground: #fff;
+  --color-warning: #b45309;
+  --color-warning-foreground: #fff;
+  --color-ring: #1d4e4a;
+  --color-accent: #1d4e4a;
+  --color-accent-foreground: #f7f5f0;
+
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --motion-quick: 150ms;
+  --motion-fast: 250ms;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  html,
+  body,
+  #app {
+    min-height: 100%;
+  }
+
+  body {
+    background: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    line-height: 1.5;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
